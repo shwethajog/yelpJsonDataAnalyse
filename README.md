@@ -1,6 +1,6 @@
 # New Yorker Home Test to analyze Yelp Json Dataset
 
-### The Yelp dataset is a subset of businesses, reviews, and user data. It has 6 files as listed below in json format.
+### The Yelp dataset inludes information about businesses, reviews, and user data. It has 6 files as listed below in json format.
 
 1. business.json
 2. review.json
