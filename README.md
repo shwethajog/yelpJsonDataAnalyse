@@ -63,7 +63,8 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
    3b*. If input is not copied in Step 3a, then upload your input file. <br />
    ```mkdir input``` <br />
    *upload file into http://localhost:8888/tree/input*  <br />
-   ![File Upload image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/file%20upload.png)
+   ![File Upload image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/file%20upload.png) <br />
+   ![File Upload image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/uploaded_file.png)
 
 7. Open notebook file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br />      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb) <br />  
 ![Open Notebook image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/open_notebook.png)
