@@ -25,6 +25,10 @@ Its bit trickier to programatically download from given URL because of license a
 Also to not overhead the user to clone the git repository, src code is also copied into docker image. But if user has downloaded data and has running spark cluster with above mentioned stack, then src can be clone using below command.
 ``` git clone https://github.com/shwethajog/yelpJsonDataAnalyse.git ```
 
+### If just want to see ipynb file for queries and results
+1. Open https://nbviewer.jupyter.org/ and paste below url to see yelp_data_analyze.ipynb as github has some error to show ipynb code. 
+https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/src/yelp_data_analyze.ipynb
+
 Steps to run this project
 ### If you don'thave spark cluster, the bellow cmmand will give you a running spark cluster 
 1. docker run -it -p 8888:8888 pyspark_image<br/>
