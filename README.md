@@ -36,7 +36,7 @@ Steps to run this project
 3. Upload or copy input yelp_dataset.tar file to any input folder<br/>
     This is not mandatory, as for fallback data(.tar file) comes with docker image.
 
-4. Open notebbok file(spark_instance.ipynb) colned git repository <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
+4. Open notebbok file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
 5. Change path of 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3rd step).
 
