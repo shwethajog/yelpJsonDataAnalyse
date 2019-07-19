@@ -27,22 +27,22 @@ Also to not overhead the user to clone the git repository, src code is also copi
 
 Steps to run this project
 ### If you don'thave spark cluster, the bellow cmmand will give you a running spark cluster 
-1. docker run -it -p 8888:8888 pyspark_image
-  After downloading all required images it spin up the cluster and gives token as below
-  http://(48e4a0f4ea31 or 127.0.0.1):8888/?token=e6087af13136dc1868bb303b3db176e7b395e7b51be3906f
+1. docker run -it -p 8888:8888 pyspark_image<br/>
+   After downloading all required images it spin up the cluster and gives token as below<br/>
+   http://(48e4a0f4ea31 or 127.0.0.1):8888/?token=e6087af13136dc1868bb303b3db176e7b395e7b51be3906f
 
 2. On browse open the url http://localhost:8888/login and copy paste the above token into Token text box and then Login.
 
--- This is not mandatory, as for fallback data(.tar file) comes with docker image.
-4. Upload or copy input yelp_dataset.tar file to any input folder
+3. Upload or copy input yelp_dataset.tar file to any input folder<br/>
+    This is not mandatory, as for fallback data(.tar file) comes with docker image.
 
-5. Open notebbok file(spark_instance.ipynb) colned git repository (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
+4. Open notebbok file(spark_instance.ipynb) colned git repository <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
-6. Change path of 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 4th step).
+5. Change path of 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3rd step).
 
-#This will untar the file and copy all json files into ~/input location
-7. Run 1st and 2nd cells
+6. Run 1st and 2nd cells<br/>
+    This will untar the file and copy all json files into ~/input location
 
-8. Run all cells to see output & visualize data in tabular and plotted variours graph format.
+7. Run all cells to see output & visualize data in tabular and plotted variours graph format.
 
 
