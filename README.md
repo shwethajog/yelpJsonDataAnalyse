@@ -29,25 +29,47 @@ Also to not overhead the user to clone the git repository, src code is also copi
 1. Open https://nbviewer.jupyter.org/ and paste below url to see yelp_data_analyze.ipynb as github has some error to show ipynb code. 
 https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/src/yelp_data_analyze.ipynb
 
-Steps to run this project
-### If you don'thave spark cluster, the bellow cmmand will give you a running spark cluster 
-1. docker run -it -p 8888:8888 pyspark_image<br/>
+### Steps to run this project
+jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is used)
+
+1. Cloning git repository
+``` git clone https://github.com/shwethajog/yelpJsonDataAnalyse.git ```
+![git clone image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/git_clone.png)
+
+
+2. Run below commands
+``` cd yelpJsonDataAnalyse
+```
+
+3. Input can be provided in 2 ways.
+   3a.   Create input folder in current working directory.
+         Download (https://www.yelp.com/dataset/download) yelp_dataset.tar file into input/ folder.
+         (SO while building docker image, unput will be added to pyspark-notebook image.) 
+         ![input copy image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/input_copy.png)
+   3b.   If you don't want to include a input file in Docker image, then, upload .tar file into pyspark-notebook machine after step 6.
+   
+4. Build docker image   
+```docker build -t yelp_data_analyze .```
+![docker build image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/docker_build.png)
+
+5. Run docker container
+```docker run -it -p 8888:8888 yelp_data_analyze```
+![docker run image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/docker_run.png)
    After downloading all required images it spin up the cluster and gives token as below<br/>
    http://(48e4a0f4ea31 or 127.0.0.1):8888/?token=e6087af13136dc1868bb303b3db176e7b395e7b51be3906f
 
-2. On browse open the url http://localhost:8888/login and copy paste the above token into Token text box and then Login.
+6. On browse open the url http://localhost:8888/login and copy paste the token(similar to above which is on your command line) into Token text box and then Login. 
 
-3. Upload or copy input yelp_dataset.tar file to any input folder<br/>
-    This is not mandatory, as for fallback data(.tar file) comes with docker image.
+3b*. If input is not copied in Step 3a, then upload your input file into http://localhost:8888/tree/input .
 
-4. Open notebbok file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
+7. Open notebbok file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
-5. Change path of 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3rd step).
+8. Change path of 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3b step).
 
-6. Run 1st and 2nd cells<br/>
+9. Run 1st and 2nd cells<br/>
     This will untar the file and copy all json files into ~/input location
 
-7. Run all cells to see output & visualize data in tabular and plotted variours graph format.
+10. Run all cells to see output & visualize data in tabular and plotted variours graph format.
 
 
 ## Which DB Engine to choose
