@@ -9,9 +9,10 @@
 5. photo.json
 6. tip.json
 
-This project is to read a yelp_dataset.tar file, decompress it and read each json files into DataFrame which then registered as temporary tables. On top of these tables some queries are executed to analyze data. Also we can recommend businesses to improve depens on tip & reviews. Busainess can improve in some categories or start new categories based on yoy(year over year) decline rate of their competitors.
-
-Some Outputs are also plotted in graph or tabular format for better visualiztaion.
+- This project is to read a yelp_dataset.tar file, decompress it and read each json files into DataFrame which then registered as temporary tables.
+- On top of these tables some queries are executed to analyze data. Also we can recommend businesses to improve depens on tip & reviews.
+- Busainess can improve in some categories or start new categories based on yoy(year over year) decline rate of their competitors.
+- Some Outputs are also plotted in graph or tabular format for better visualiztaion.
 
 ### Stacks used in thsi project are :
 1. Spark
@@ -19,11 +20,9 @@ Some Outputs are also plotted in graph or tabular format for better visualiztaio
 3. Docker
 4. Python 3
 
-Yelp data set can be downloaded (https://www.yelp.com/dataset/download) from here after signing for the license agreements.
-Its bit trickier to programatically download from given URL because of license agreements. So for easyness .tar file is copied to JupyterNotebook image(Eventhough this is not good idea to copy dataset in Docker Image). If user does not passes input file or passes wrong file then always fallback is done for this default copied .tar file.
-
-Also to not overhead the user to clone the git repository, src code is also copied into docker image. But if user has downloaded data and has running spark cluster with above mentioned stack, then src can be clone using below command.
-``` git clone https://github.com/shwethajog/yelpJsonDataAnalyse.git ```
+- Yelp data set can be downloaded (https://www.yelp.com/dataset/download) from here after signing for the license agreements.
+- Its bit trickier to programatically download from given URL because of license agreements. So for easyness .tar file is copied to JupyterNotebook image(Eventhough this is not good idea to copy dataset in Docker Image).
+- If user does not passes input file or passes wrong file then always fallback is done for this default copied .tar file.
 
 ### If just want to see ipynb file for queries and results
 1. Open https://nbviewer.jupyter.org/ and paste below url to see yelp_data_analyze.ipynb as github has some error to show ipynb code. 
@@ -43,8 +42,9 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 3. Input can be provided in 2 ways.
    3a.   Create input folder in current working directory.
          Download (https://www.yelp.com/dataset/download) yelp_dataset.tar file into input/ folder.
-         (SO while building docker image, unput will be added to pyspark-notebook image.) 
+         (SO while building docker image, input will be added to pyspark-notebook image.) 
          ![input copy image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/input_copy.png)
+         
    3b.   If you don't want to include a input file in Docker image, then, upload .tar file into pyspark-notebook machine after step 6.
    
 4. Build docker image   
@@ -59,7 +59,9 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 
 6. On browse open the url http://localhost:8888/login and copy paste the token(similar to above which is on your command line) into Token text box and then Login. 
 
-   3b*. If input is not copied in Step 3a, then upload your input file into http://localhost:8888/tree/input .
+   3b*. If input is not copied in Step 3a, then upload your input file.
+   ```mkdir input```
+   *upload file into http://localhost:8888/tree/input*
 
 7. Open notebbok file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
