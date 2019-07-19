@@ -36,14 +36,14 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 ![git clone image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/git_clone.png)
 
 
-2. Run below commands <br\>
+2. Run below commands <br />
 ``` cd yelpJsonDataAnalyse ```
 
-3. Input can be provided in 2 ways.<br\>
+3. Input can be provided in 2 ways. <br />
    3a.   Create input folder in current working directory.
          Download (https://www.yelp.com/dataset/download) yelp_dataset.tar file into input/ folder.
-         (SO while building docker image, input will be added to pyspark-notebook image.) 
-         ![input copy image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/input_copy.png) <br\>
+         (SO while building docker image, input will be added to pyspark-notebook image.) <br />
+         ![input copy image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/input_copy.png) <br />
          
    3b.   If you don't want to include a input file in Docker image, then, upload .tar file into pyspark-notebook machine after step 6.
    
@@ -59,11 +59,11 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 
 6. On browse open the url http://localhost:8888/login and copy paste the token(similar to above which is on your command line) into Token text box and then Login. 
 
-   3b*. If input is not copied in Step 3a, then upload your input file.<br\>
-   ```mkdir input``` <br\>
+   3b*. If input is not copied in Step 3a, then upload your input file. <br />
+   ```mkdir input``` <br />
    *upload file into http://localhost:8888/tree/input*
 
-7. Open notebook file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
+7. Open notebook file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br />      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
 8. Change path in 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3b step).
 
