@@ -50,3 +50,6 @@ Steps to run this project
 7. Run all cells to see output & visualize data in tabular and plotted variours graph format.
 
 
+## Which DB Engine to choose
+DB engine is selected based on the use case, data type and which supports needed from CAP. Detailed comparision is done betwwen Hive, Casandra & MongoDB and stored here(https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/data_model/description) Also. Data model designed for Yelp Data and that can be found here (https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/data_model/business_model.jpg)
+
