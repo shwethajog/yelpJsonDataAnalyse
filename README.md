@@ -14,7 +14,7 @@
 - Busainess can improve in some categories or start new categories based on yoy(year over year) decline rate of their competitors.
 - Some Outputs are also plotted in graph or tabular format for better visualiztaion.
 
-### Stacks used in thsi project are :
+### Stacks used in this project are :
 1. Spark
 2. Jupyter Notebook
 3. Docker
@@ -63,9 +63,9 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
    ```mkdir input``` <br\>
    *upload file into http://localhost:8888/tree/input*
 
-7. Open notebbok file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
+7. Open notebook file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
-8. Change path of 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3b step).
+8. Change path in 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3b step).
 
 9. Run 1st and 2nd cells<br/>
     This will untar the file and copy all json files into ~/input location
@@ -74,5 +74,6 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 
 
 ## Which DB Engine to choose
-DB engine is selected based on the use case, data type and which supports needed from CAP. Detailed comparision is done betwwen Hive, Casandra & MongoDB and stored here(https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/data_model/description) Also. Data model designed for Yelp Data and that can be found here (https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/data_model/business_model.jpg)
+- DB engine is selected based on the use case, data type and which supports needed from CAP. Detailed comparision is done betwwen Hive, Casandra & MongoDB and stored here(https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/data_model/description) Also.
+- Data model designed for Yelp Data and that can be found here (https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/data_model/business_model.jpg)
 
