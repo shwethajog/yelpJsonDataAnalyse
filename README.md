@@ -31,7 +31,7 @@ https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/src/yelp_data_anal
 ### Steps to run this project
 jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is used)
 
-1. Cloning git repository
+1. Cloning git repository <br />
 ``` git clone https://github.com/shwethajog/yelpJsonDataAnalyse.git ```
 ![git clone image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/git_clone.png)
 
