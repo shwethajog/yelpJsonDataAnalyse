@@ -38,8 +38,7 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 
 
 2. Run below commands
-``` cd yelpJsonDataAnalyse
-```
+``` cd yelpJsonDataAnalyse ```
 
 3. Input can be provided in 2 ways.
    3a.   Create input folder in current working directory.
@@ -60,7 +59,7 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
 
 6. On browse open the url http://localhost:8888/login and copy paste the token(similar to above which is on your command line) into Token text box and then Login. 
 
-3b*. If input is not copied in Step 3a, then upload your input file into http://localhost:8888/tree/input .
+   3b*. If input is not copied in Step 3a, then upload your input file into http://localhost:8888/tree/input .
 
 7. Open notebbok file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br/>      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
 
