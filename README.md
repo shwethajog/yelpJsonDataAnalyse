@@ -57,15 +57,19 @@ jupyter/pyspark-notebook is included in Dockerfile as a SMACK stack(SPARK is use
    After downloading all required images it spin up the cluster and gives token as below<br/>
    http://(48e4a0f4ea31 or 127.0.0.1):8888/?token=e6087af13136dc1868bb303b3db176e7b395e7b51be3906f
 
-6. On browse open the url http://localhost:8888/login and copy paste the token(similar to above which is on your command line) into Token text box and then Login. 
+6. On browse open the url http://localhost:8888/login and copy paste the token(similar to above which is on your command line) into Token text box and then Login.  <br />
+![Login image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/login.png)
 
    3b*. If input is not copied in Step 3a, then upload your input file. <br />
    ```mkdir input``` <br />
-   *upload file into http://localhost:8888/tree/input*
+   *upload file into http://localhost:8888/tree/input*  <br />
+   ![File Upload image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/file%20upload.png)
 
-7. Open notebook file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br />      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb)
+7. Open notebook file(spark_instance.ipynb) from ~/yelpJsonDataAnalyse/src folder <br />      (http://localhost:8888/notebooks/yelpJsonDataAnalyse/src/spark_instance.ipynb) <br />  
+![Open Notebook image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/open_notebook.png)
 
-8. Change path in 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3b step).
+8. Change path in 2nd cell (readFiles('/home/jovyan/input/yelp_dataset.tar')) to correct input path(If you copied your own dataset in 3b step). <br />  
+![Change path image](https://github.com/shwethajog/yelpJsonDataAnalyse/blob/master/images/change_path_file.png)
 
 9. Run 1st and 2nd cells<br/>
     This will untar the file and copy all json files into ~/input location
